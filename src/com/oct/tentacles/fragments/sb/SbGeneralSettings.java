@@ -50,8 +50,10 @@ public class SbGeneralSettings extends SettingsPreferenceFragment implements OnP
 
     private static final String PREF_CUSTOM_STATUS_BAR_COLOR = "custom_status_bar_color";
     private static final String PREF_STATUS_BAR_OPAQUE_COLOR = "status_bar_opaque_color";
+    private static final String STATUS_BAR_BRIGHTNESS = "statusbar_brightness_slider";
 
     private CheckBoxPreference mCustomBarColor;
+    private CheckBoxPreference mStatusbarSliderPreference;
     private ColorPickerPreference mBarOpaqueColor;
 
     private boolean mCheckPreferences;
@@ -87,6 +89,10 @@ public class SbGeneralSettings extends SettingsPreferenceFragment implements OnP
         mCustomBarColor = (CheckBoxPreference) prefSet.findPreference(PREF_CUSTOM_STATUS_BAR_COLOR);
         mCustomBarColor.setChecked(Settings.System.getInt(mContentAppRes,
                 Settings.System.CUSTOM_STATUS_BAR_COLOR, 0) == 1);
+                
+        mStatusbarSliderPreference = (CheckBoxPreference) findPreference(STATUS_BAR_BRIGHTNESS);
+        mStatusbarSliderPreference.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.STATUSBAR_BRIGHTNESS_SLIDER, 0) == 1));
 
         mBarOpaqueColor = (ColorPickerPreference) findPreference(PREF_STATUS_BAR_OPAQUE_COLOR);
         mBarOpaqueColor.setOnPreferenceChangeListener(this);
@@ -131,6 +137,11 @@ public class SbGeneralSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.CUSTOM_STATUS_BAR_COLOR,
             mCustomBarColor.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mStatusbarSliderPreference) {
+            value = mStatusbarSliderPreference.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUSBAR_BRIGHTNESS_SLIDER, value ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

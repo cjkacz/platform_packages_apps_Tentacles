@@ -15,6 +15,12 @@
             android:dependency="custom_status_bar_color"
             android:defaultValue="0xFF000000" />
 
+        <CheckBoxPreference
+            android:key="statusbar_brightness_slider"
+            android:title="@string/brightness_slider_title"
+            android:summary="@string/brightness_slider_summary"
+            android:defaultValue="false" />
+
         <com.oct.tentacles.preference.SystemSettingCheckBoxPreference
             android:key="double_tap_sleep_gesture"
             android:title="@string/status_bar_double_tap_to_sleep_title"
