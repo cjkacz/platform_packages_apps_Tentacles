@@ -27,6 +27,11 @@
         android:entries="@array/notification_drawer_collapse_on_dismiss_entries"
         android:entryValues="@array/notification_drawer_collapse_on_dismiss_values" />
 
+    <Preference
+        android:key="carrier_label"
+        android:title="@string/carrier_label_title"
+        android:fragment="com.oct.tentacles.fragments.sb.CarrierLabel" />
+
     <PreferenceCategory
         android:title="@string/category_quick_access" >
 
@@ -50,7 +55,7 @@
             android:dependency="qs_quick_access_linked"
             android:fragment="com.oct.tentacles.fragments.sb.QuickSettingsTiles" >
             <extra android:name="config_ribbon" android:value="true" />
-        </PreferenceScreen>
+       </PreferenceScreen>
     </PreferenceCategory>
 
 </PreferenceScreen>
