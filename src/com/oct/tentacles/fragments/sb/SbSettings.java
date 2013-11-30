@@ -92,8 +92,9 @@ public class SbSettings extends SettingsPreferenceFragment {
             super(fm);
 			frags[0] = new BatterySettings();
 			frags[1] = new ClockSettings();
-            frags[2] = new NotificationDrawer();
-			frags[3] = new QuickSettings();
+			frags[2] = new SbGeneralSettings();
+            frags[3] = new NotificationDrawer();
+			frags[4] = new QuickSettings();
         }
 
         @Override
@@ -115,9 +116,10 @@ public class SbSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-		            getString(R.string.sb_battery_category),
-					getString(R.string.sb_clock_category),
-					getString(R.string.sb_notification_category),
+                    getString(R.string.sb_battery_category),
+                    getString(R.string.sb_clock_category),
+                    getString(R.string.sb_general_category),
+                    getString(R.string.sb_notification_category),
                     getString(R.string.sb_quicksettings_category)};
         return titleString;
     }
