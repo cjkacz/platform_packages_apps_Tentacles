@@ -38,6 +38,12 @@
         android:title="@string/carrier_label_title"
         android:fragment="com.oct.tentacles.fragments.sb.CarrierLabel" />
 
+    <Preference
+        android:fragment="com.oct.tentacles.fragments.sb.NotificationDrawerStyle"
+        android:key="notification_style"
+        android:title="@string/notification_style_title"
+        android:summary="@string/notification_style_summary" />
+
     <PreferenceCategory
         android:title="@string/category_quick_access" >
 
