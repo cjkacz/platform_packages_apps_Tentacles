@@ -673,4 +673,8 @@
     <string name="brightness_slider_title">Statusbar brightness slider</string>
     <string name="brightness_slider_summary">When enabled, this option will allow you to change the brightness by sliding your finger across the Statusbar. Note: Will not be active when auto-brightness is on</string>
 
+    <!-- QuickSettings fliptiles -->
+    <string name="flip_qs_tiles_title">Flip tiles</string>
+    <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
+
 </resources>

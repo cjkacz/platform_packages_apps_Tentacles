@@ -57,6 +57,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String GENERAL_SETTINGS = "pref_general_settings";
     private static final String STATIC_TILES = "static_tiles";
     private static final String DYNAMIC_TILES = "pref_dynamic_tiles";
+    private static final String PREF_FLIP_QS_TILES = "flip_qs_tiles";
 
     private MultiSelectListPreference mRingMode;
     private ListPreference mNetworkMode;
@@ -65,7 +66,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private PreferenceCategory mStaticTiles;
     private PreferenceCategory mDynamicTiles;
     private ListPreference mQuickPulldown;
-
+    private CheckBoxPreference mFlipQsTiles;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,6 +125,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mScreenTimeoutMode = (ListPreference) prefSet.findPreference(EXP_SCREENTIMEOUT_MODE);
         mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntry());
         mScreenTimeoutMode.setOnPreferenceChangeListener(this);
+        mFlipQsTiles = (CheckBoxPreference) findPreference(PREF_FLIP_QS_TILES);
+        mFlipQsTiles.setChecked(Settings.System.getInt(resolver,
+                Settings.System.QUICK_SETTINGS_TILES_FLIP, 0) == 1);
 
         // Remove unsupported options
 /*        if (!QSUtils.deviceSupportsDockBattery(getActivity())) {
@@ -206,6 +210,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             int index = mScreenTimeoutMode.findIndexOfValue((String) newValue);
             Settings.System.putInt(resolver, Settings.System.EXPANDED_SCREENTIMEOUT_MODE, value);
             mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntries()[index]);
+        } else if (preference == mFlipQsTiles) {
+            Settings.System.putInt(resolver,
+                    Settings.System.QUICK_SETTINGS_TILES_FLIP,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             return true;
         }
         return false;
