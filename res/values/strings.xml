@@ -419,22 +419,6 @@
     <string name="recent_clear_all_button_location_bottom_left">Bottom left</string>
     <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
 	
-    <!--Lockscreen See Through-->
-    <string name="see_through_title">See through</string>
-    <string name="see_through_summary">Shows the content behind your lockscreen, your data may be visible to those around you</string>
-
-    <!--Lockscreen blur-->
-    <string name="blur_behind_title">Blur Lockscreen Background</string>
-    <string name="blur_behind_summary">Adds a nice blur effect to the background</string>
-    <string name="blur_radius_title">Blur Radius</string>
-    <string name="blur_radius_summary">Set the blur radius for the blur effect</string>
-	
-    <!-- Lockscreen Notifications -->
-    <!-- Categories --> 
-    <string name="general">General</string>
-    <string name="layout">Layout</string>
-    <string name="privacy">Privacy</string>
-	
     <!-- Lockscreen widget settings -->
 	<string name="enabled">Enabled</string>
     <string name="lockscreen_widgets_title">Widgets</string>
@@ -447,6 +431,26 @@
     <string name="lockscreen_use_widget_container_carousel_title">Enable portrait widget carousel</string>
     <string name="lockscreen_use_widget_container_carousel_summary">Use carousel animation in portrait when switching between lock screen widgets</string>
 
+    <!--Lockscreen See Through-->
+     <string name="see_through_title">See through</string>
+     <string name="see_through_summary">Shows the content behind your lockscreen, your data may be visible to those around you</string>
+
+     <!--Lockscreen blur-->
+    <string name="blur_behind_title">Blur lockscreen background</string>
+    <string name="blur_behind_summary">Adds a nice blur effect to the background</string>
+    <string name="blur_radius_title">Blur radius</string>
+    <string name="blur_radius_summary">Set the blur radius for the blur effect</string>
+
+    <!-- Lockscreen wallpaper -->
+    <string name="lockscreen_wallpaper">Custom wallpaper</string>
+    <string name="select_wallpaper">Select wallpaper</string>
+
+    <!-- Lockscreen Notifications -->
+    <!-- Categories -->
+    <string name="general">General</string>
+    <string name="layout">Layout</string>
+    <string name="privacy">Privacy</string>	
+	
     <string name="lockscreen_notifications">Lockscreen notifications</string>
     <string name="lockscreen_notifications_summary">Show pending notifications on lockscreen</string>
     <string name="pocket_mode">Pocket mode</string>

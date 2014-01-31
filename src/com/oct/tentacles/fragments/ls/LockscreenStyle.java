@@ -299,12 +299,12 @@ public class LockscreenStyle extends SettingsPreferenceFragment
 
         intent.setType("image/*");
         intent.putExtra("crop", "true");
-        intent.putExtra("aspectX", px);
-        intent.putExtra("aspectY", px);
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
         intent.putExtra("outputX", px);
         intent.putExtra("outputY", px);
         intent.putExtra("scale", true);
-        intent.putExtra("scaleUpIfNeeded", false);
+        intent.putExtra("scaleUpIfNeeded", true);
         intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
 
         try {
