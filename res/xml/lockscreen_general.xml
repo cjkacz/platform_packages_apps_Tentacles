@@ -15,20 +15,6 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <CheckBoxPreference
-            android:key="see_through"
-            android:title="@string/see_through_title"
-            android:summary="@string/see_through_summary" />
-
-    <SeekBarPreference
-            android:key="blur_radius"
-            android:title="@string/blur_radius_title"
-            android:summary="@string/blur_radius_summary"
-            android:dependency="see_through"
-            android:max="25"
-            android:defaultValue="12" />
-
     <CheckBoxPreference
         android:key="lockscreen_eight_targets"
         android:title="@string/lockscreen_eight_targets_title"
@@ -51,9 +37,27 @@
             android:fragment="com.oct.tentacles.fragments.ls.LockscreenStyle"
             android:title="@string/lockscreen_style_title"/>
 			
-        <PreferenceScreen
-            android:key="keyguard_enable_widgets"
-            android:fragment="com.oct.tentacles.fragments.ls.LockscreenWidgets"
-            android:title="@string/lockscreen_widgets_title"/>
+    <PreferenceScreen
+        android:key="keyguard_enable_widgets"
+        android:fragment="com.oct.tentacles.fragments.ls.LockscreenWidgets"
+        android:title="@string/lockscreen_widgets_title"/>
+
+    <CheckBoxPreference
+        android:key="battery_around_lockscreen_ring"
+        android:title="@string/battery_around_lockscreen_ring"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+            android:key="see_through"
+            android:title="@string/see_through_title"
+            android:summary="@string/see_through_summary" />
+
+    <SeekBarPreference
+            android:key="blur_radius"
+            android:title="@string/blur_radius_title"
+            android:summary="@string/blur_radius_summary"
+            android:dependency="see_through"
+            android:max="25"
+            android:defaultValue="12" />
 
 </PreferenceScreen>
