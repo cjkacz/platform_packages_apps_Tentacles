@@ -8,8 +8,18 @@
             android:action="android.intent.action.MAIN"
             android:targetPackage="org.oct.about"
             android:targetClass="org.oct.about.activities.AboutActivity" />
-    </header>      
-    <header
-        android:title="@string/user_interface" />
+    </header>    
+	<header
+        android:title="@string/app_name" />
+        
+	    <header
+	        android:id="@+id/themes_settings"
+	        android:icon="@drawable/ic_settings_themes"
+	        android:title="@string/themes_title">
+ 	       <intent
+	            android:action="android.intent.action.MAIN"
+	            android:targetPackage="com.tmobile.themechooser"
+	            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+	    </header>
 
 </preference-headers>

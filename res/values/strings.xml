@@ -6,6 +6,9 @@
     
     <!-- About OctOS Strings -->
     <string name="about_octos_title">About OctOS</string>
+    
+    <!-- Theme manager -->
+    <string name="themes_title">Themes</string>
 
     <!-- Header Strings -->
     <string name="user_interface">Interface</string>
