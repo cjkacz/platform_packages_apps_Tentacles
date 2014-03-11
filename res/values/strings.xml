@@ -128,5 +128,19 @@
     <string name="gamma_tuning_contrast">Contrast</string>
     <string name="gamma_tuning_brightness">Brightness</string>
     <string name="gamma_tuning_saturation">Saturation</string>
- 
+    
+	<!-- Interface settings -->
+    <string name="ui_recents_category">Recents Panel</string>   
+    
+    <!-- Recents clear all -->
+    <string name="category_recent_panel_title" >Recents menu</string>
+    <string name="show_recent_clear_all_button_title">Clear all button</string>
+    <string name="show_recent_clear_all_button_summary">Show clear all button within the recent applications view</string>
+    <string name="recent_clear_all_button_location_title">Clear all button position</string>
+    <string name="recent_clear_all_button_location_summary">Choose position of the clear all button</string>
+    <string name="recent_clear_all_button_location_top_left">Top left</string>
+    <string name="recent_clear_all_button_location_top_right">Top right</string>
+    <string name="recent_clear_all_button_location_bottom_left">Bottom left</string>
+    <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
+    
 </resources>

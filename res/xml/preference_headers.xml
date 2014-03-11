@@ -22,6 +22,11 @@
 	            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
 	    </header>
         <header
+            android:key="@+id/interface_settings"
+            android:icon="@drawable/ic_tentacles_interface"
+            android:title="@string/user_interface"
+            android:fragment="com.oct.tentacles.fragments.ui.InterfaceSettings" />
+        <header
             android:key="@+id/keyguard_settings"
             android:icon="@drawable/ic_tentacles_keyguard"
             android:title="@string/keyguard_title"

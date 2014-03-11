@@ -45,6 +45,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".fragments.ui.InterfaceSettings"
+            android:label="@string/user_interface" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.oct.tentacles.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
  	    android:name=".ShareToClipboard"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
  	    android:label="@string/title_clipboard_share" >
