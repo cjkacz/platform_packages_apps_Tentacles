@@ -36,9 +36,14 @@ public class RecentsPanel extends SettingsPreferenceFragment implements
 
     private static final String RECENT_MENU_CLEAR_ALL = "recent_menu_clear_all";
     private static final String RECENT_MENU_CLEAR_ALL_LOCATION = "recent_menu_clear_all_location";
+    private static final String SHOW_RECENTS_MEMORY_INDICATOR = "show_recents_memory_indicator";
+    private static final String RECENTS_MEMORY_INDICATOR_LOCATION =
+            "recents_memory_indicator_location";
 
     private CheckBoxPreference mRecentClearAll;
     private ListPreference mRecentClearAllPosition;
+    private CheckBoxPreference mShowRecentsMemoryIndicator;
+    private ListPreference mRecentsMemoryIndicatorPosition;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,20 @@ public class RecentsPanel extends SettingsPreferenceFragment implements
              mRecentClearAllPosition.setValue(recentClearAllPosition);
         }
         mRecentClearAllPosition.setOnPreferenceChangeListener(this);
+
+        mShowRecentsMemoryIndicator = (CheckBoxPreference)
+                prefSet.findPreference(SHOW_RECENTS_MEMORY_INDICATOR);
+        mShowRecentsMemoryIndicator.setChecked(Settings.System.getInt(resolver,
+                Settings.System.SHOW_RECENTS_MEMORY_INDICATOR, 0) == 1);
+        mShowRecentsMemoryIndicator.setOnPreferenceChangeListener(this);
+        mRecentsMemoryIndicatorPosition = (ListPreference) prefSet
+                .findPreference(RECENTS_MEMORY_INDICATOR_LOCATION);
+        String recentsMemoryIndicatorPosition = Settings.System.getString(
+                resolver, Settings.System.RECENTS_MEMORY_INDICATOR_LOCATION);
+        if (recentsMemoryIndicatorPosition != null) {
+            mRecentsMemoryIndicatorPosition.setValue(recentsMemoryIndicatorPosition);
+        }
+        mRecentsMemoryIndicatorPosition.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -69,6 +88,14 @@ public class RecentsPanel extends SettingsPreferenceFragment implements
         } else if (preference == mRecentClearAllPosition) {
             String value = (String) objValue;
             Settings.System.putString(resolver, Settings.System.CLEAR_RECENTS_BUTTON_LOCATION, value);
+        } else if (preference == mShowRecentsMemoryIndicator) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(
+                    resolver, Settings.System.SHOW_RECENTS_MEMORY_INDICATOR, value ? 1 : 0);
+        } else if (preference == mRecentsMemoryIndicatorPosition) {
+            String value = (String) objValue;
+            Settings.System.putString(
+                    resolver, Settings.System.RECENTS_MEMORY_INDICATOR_LOCATION, value);
         } else {
             return false;
         }

@@ -623,4 +623,10 @@
     <!-- Lockscreen battery ring -->
     <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
  
+    <!-- Memory Indicator -->
+    <string name="show_recents_memory_indicator_title">Memory indicator</string>
+    <string name="show_recents_memory_indicator_summary">Show a memory indicator within the recent applications view</string>
+    <string name="recents_memory_indicator_location_title">Memory indicator position</string>
+    <string name="recents_memory_indicator_location_summary">Choose position of the memory indicator</string>
+    
 </resources>
