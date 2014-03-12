@@ -90,6 +90,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new RecentsPanel();
+            frags[1] = new AppSwitcher();
         }
 
         @Override
@@ -111,7 +112,8 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.ui_recents_category)};
+                    getString(R.string.ui_recents_category),
+                    getString(R.string.app_switcher_category)};
         return titleString;
     }
 }
