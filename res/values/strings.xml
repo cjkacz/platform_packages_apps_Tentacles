@@ -57,5 +57,8 @@
     <string name="hex_hint">#FF000000</string>
     <string name="set">Set</string>
     <string name="ics_color">Holo</string>
-
+ 
+    <!-- Superuser -->
+    <string name="supersu_title">SuperSU</string>
+ 
 </resources>
