@@ -69,10 +69,11 @@
             android:entries="@array/entries_screentimeout_widget"
             android:entryValues="@array/values_screentimeout_widget" />
 
-        <CheckBoxPreference
-            android:key="flip_qs_tiles"
+        <com.oct.tentacles.preference.SystemSettingCheckBoxPreference
+            android:key="quick_settings_tiles_flip"
             android:title="@string/flip_qs_tiles_title"
-            android:summary="@string/flip_qs_tiles_summary" />
+            android:summary="@string/flip_qs_tiles_summary"
+            android:defaultValue="false" />
 
         </PreferenceCategory>
 
