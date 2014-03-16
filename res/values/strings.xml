@@ -555,5 +555,8 @@
 	
 	<!-- Quick Settings --><!-- Added for slim power menu -->
 	<string name="quicksettings_tiles_style"></string>
-
+    
+    <!-- Lockscreen battery ring -->
+    <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
+ 
 </resources>
