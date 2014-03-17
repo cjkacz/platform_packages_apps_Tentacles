@@ -38,8 +38,10 @@ import android.widget.TextView;
 
 
 // fragments import for entry
+import com.oct.tentacles.dslv.*;
 import com.oct.tentacles.fragments.*;
 import com.oct.tentacles.fragments.ls.*;
+import com.oct.tentacles.fragments.navbar.*;
 import com.oct.tentacles.fragments.ui.*;
 
 public class SettingsActivity extends PreferenceActivity implements ButtonBarHandler {
@@ -196,6 +198,12 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
         InterfaceSettings.class.getName(),
     	KeyguardSettings.class.getName(),
 		MoreDeviceSettings.class.getName(),
+        NavbarTab.class.getName(),
+        NavBarButtonStyle.class.getName(),
+        NavbarStyleDimenSettings.class.getName(),
+        NavbarButtonFragment.class.getName(),
+        ButtonsListViewSettings.class.getName(),      
+        NavbarSettings.class.getName()
     };
 
     @Override
