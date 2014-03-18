@@ -90,6 +90,7 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+	
     <!-- Status bar auto-collapse behaviour -->
     <string-array name="notification_drawer_collapse_on_dismiss_entries" translatable="false">
         <item>@string/collapse_on_dismiss_never</item>
@@ -109,6 +110,41 @@
         <item>2</item>
     </string-array>
 
+	<!-- Slim battery style -->
+    <string-array name="entries_battery_icon">
+        <item>@string/battery_status_icon</item>
+        <item>@string/battery_status_percentage</item>
+        <item>@string/battery_status_icon_percentage</item>
+        <item>@string/battery_status_circle</item>
+        <item>@string/battery_status_circle_percentage</item>
+        <item>@string/battery_status_dotted_circle</item>
+        <item>@string/battery_status_dotted_circle_percentage</item>
+    </string-array>
+
+    <string-array name="values_battery_icon" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="circle_battery_animation_speed_entries" >
+        <item>@string/circle_battery_animation_speed_none</item>
+        <item>@string/circle_battery_animation_speed_slow</item>
+        <item>@string/circle_battery_animation_speed_stock</item>
+        <item>@string/circle_battery_animation_speed_fast</item>
+    </string-array>
+
+    <string-array name="circle_battery_animation_speed_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+ 
     <!-- Clear All -->
     <string-array name="recent_clear_all_button_location_entries" translatable="false">
         <item>@string/recent_clear_all_button_location_top_left</item>
