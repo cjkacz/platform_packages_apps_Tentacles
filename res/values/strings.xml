@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Tentacles -->
     <string name="app_name">Tentacles</string>
+    
+    <!-- About OctOS Strings -->
+    <string name="about_octos_title">About OctOS</string>
 
     <!-- Header Strings -->
     <string name="user_interface">Interface</string>

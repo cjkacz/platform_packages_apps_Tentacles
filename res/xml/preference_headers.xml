@@ -1,5 +1,14 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
 
+	<header
+        android:id="@+id/about_octos"
+        android:icon="@drawable/ic_tentacles_about"
+        android:title="@string/about_octos_title" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="org.oct.about"
+            android:targetClass="org.oct.about.activities.AboutActivity" />
+    </header>      
     <header
         android:title="@string/user_interface" />
 
