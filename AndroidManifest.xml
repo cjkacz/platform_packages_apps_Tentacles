@@ -1,8 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.oct.tentacles" 
-    android:sharedUserId="android.uid.system" >
+    package="com.oct.tentacles" >
 
-    <uses-sdk android:minSdkVersion="19"/>
     <original-package android:name="com.oct.tentacles" />
 
     <uses-permission android:name="android.permission.REBOOT" />
@@ -27,8 +25,9 @@
         android:label="@string/app_name"
         android:theme="@style/application_theme_dark"
         android:uiOptions="none" >
+        
         <activity
-            android:name=".SettingsActivity"
+            android:name="com.oct.tentacles.SettingsActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
- 	    android:name=".ShareToClipboard"
+ 	    android:name="com.oct.tentacles.ShareToClipboard"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
  	    android:label="@string/title_clipboard_share" >
             <intent-filter>
@@ -50,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
- 	    android:name=".CreateShortcut"
+ 	    android:name="com.oct.tentacles.CreateShortcut"
              android:theme="@style/Theme.CreateShortCut" >
  	  <intent-filter>
                <action android:name="android.intent.action.CREATE_SHORTCUT" />
@@ -59,12 +58,12 @@
           </intent-filter>
         </activity>
         <receiver
-            android:name=".service.ChangeFastChargeStateReceiver" >
+            android:name="com.oct.tentacles.service.ChangeFastChargeStateReceiver" >
             <intent-filter>
                 <action android:name="com.oct.tentacles.ACTION_CHANGE_FCHARGE_STATE" />
             </intent-filter>
         </receiver>
-        <service android:name=".service.ExternalCommandService"
+        <service android:name="com.oct.tentacles.service.ExternalCommandService"
             android:exported="false" />
     </application>
 </manifest>
