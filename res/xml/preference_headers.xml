@@ -20,7 +20,12 @@
 	            android:action="android.intent.action.MAIN"
 	            android:targetPackage="com.tmobile.themechooser"
 	            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
-	    </header>           
+	    </header>
+        <header
+            android:key="@+id/keyguard_settings"
+            android:icon="@drawable/ic_tentacles_keyguard"
+            android:title="@string/keyguard_title"
+            android:fragment="com.oct.tentacles.fragments.ls.KeyguardSettings" />           
     	<header
         	android:id="@+id/supersu_settings"
         	android:icon="@drawable/ic_settings_supersu"

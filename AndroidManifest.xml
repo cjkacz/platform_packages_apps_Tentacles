@@ -27,7 +27,7 @@
         android:uiOptions="none" >
         
         <activity
-            android:name="com.oct.tentacles.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,16 @@
             </intent-filter>
         </activity>
         <activity
- 	    android:name="com.oct.tentacles.ShareToClipboard"
+            android:name=".fragments.ls.KeyguardSettings"
+            android:label="@string/keyguard_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.oct.tentacles.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
+ 	    android:name=".ShareToClipboard"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
  	    android:label="@string/title_clipboard_share" >
             <intent-filter>
@@ -49,7 +58,7 @@
             </intent-filter>
         </activity>
         <activity
- 	    android:name="com.oct.tentacles.CreateShortcut"
+ 	    android:name="Theme.CreateShortcut"
              android:theme="@style/Theme.CreateShortCut" >
  	  <intent-filter>
                <action android:name="android.intent.action.CREATE_SHORTCUT" />
@@ -58,12 +67,12 @@
           </intent-filter>
         </activity>
         <receiver
-            android:name="com.oct.tentacles.service.ChangeFastChargeStateReceiver" >
+            android:name=".service.ChangeFastChargeStateReceiver" >
             <intent-filter>
                 <action android:name="com.oct.tentacles.ACTION_CHANGE_FCHARGE_STATE" />
             </intent-filter>
         </receiver>
-        <service android:name="com.oct.tentacles.service.ExternalCommandService"
+        <service android:name=".service.ExternalCommandService"
             android:exported="false" />
     </application>
 </manifest>

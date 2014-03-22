@@ -38,6 +38,7 @@ import android.widget.TextView;
 
 
 // fragments import for entry
+import com.oct.tentacles.fragments.ls.*;
 
 public class SettingsActivity extends PreferenceActivity implements ButtonBarHandler {
 
@@ -190,6 +191,7 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
     }
 
     private static final String[] ENTRY_FRAGMENTS = {
+    	KeyguardSettings.class.getName(),
     };
 
     @Override
