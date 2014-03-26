@@ -62,6 +62,8 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
     private static final String PREF_LOCKSCREEN_SHORTCUTS = "lockscreen_shortcuts";
 
     private ListPreference mBatteryStatus;
+    private CheckBoxPreference mSeeThrough;
+    private SeekBarPreference mBlurRadius;
     private CheckBoxPreference mLockscreenEightTargets;
     private Preference mShortcuts;
 
@@ -79,6 +81,13 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefs = getPreferenceScreen();
         ContentResolver resolver = getContentResolver();
+		
+        // lockscreen see through
+        mSeeThrough = (CheckBoxPreference) prefs.findPreference(KEY_SEE_TRHOUGH);
+        mBlurRadius = (SeekBarPreference) prefs.findPreference(KEY_BLUR_RADIUS);
+        mBlurRadius.setProgress(Settings.System.getInt(resolver,
+            Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
+        mBlurRadius.setOnPreferenceChangeListener(this);
 
         mLockscreenEightTargets = (CheckBoxPreference) findPreference(
                 PREF_LOCKSCREEN_EIGHT_TARGETS);
@@ -91,13 +100,27 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
         mShortcuts.setEnabled(!mLockscreenEightTargets.isChecked());
 
     }
+	
+  @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        ContentResolver cr = getContentResolver();
 
+        if (preference == mSeeThrough) {
+              Settings.System.putInt(cr, Settings.System.LOCKSCREEN_SEE_THROUGH,
+                      mSeeThrough.isChecked() ? 1 : 0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }	
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver cr = getActivity().getContentResolver();
-
-        if (preference == mLockscreenEightTargets) {
+		
+        if (preference == mBlurRadius) {
+            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)objValue);
+            return true;
+        } else if (preference == mLockscreenEightTargets) {
             showDialogInner(DLG_ENABLE_EIGHT_TARGETS, (Boolean) objValue);
             return true;
         }
