@@ -40,7 +40,12 @@
             android:id="@+id/navbar_settings"
             android:icon="@drawable/ic_settings_navigation"
             android:title="@string/navbar_cat"
-            android:fragment="com.oct.tentacles.fragments.navbar.NavbarTab" />        
+            android:fragment="com.oct.tentacles.fragments.navbar.NavbarTab" />
+        <header
+            android:id="@+id/statusbar_settings"
+            android:title="@string/status_bar_title"
+            android:icon="@drawable/ic_tentacles_sb"
+            android:fragment="com.oct.tentacles.fragments.sb.SbSettings" />			
     	<header
         	android:id="@+id/supersu_settings"
         	android:icon="@drawable/ic_settings_supersu"

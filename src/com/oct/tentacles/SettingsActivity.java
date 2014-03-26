@@ -42,6 +42,7 @@ import com.oct.tentacles.dslv.*;
 import com.oct.tentacles.fragments.*;
 import com.oct.tentacles.fragments.ls.*;
 import com.oct.tentacles.fragments.navbar.*;
+import com.oct.tentacles.fragments.sb.*;
 import com.oct.tentacles.fragments.ui.*;
 
 public class SettingsActivity extends PreferenceActivity implements ButtonBarHandler {
@@ -122,6 +123,7 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
         }
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setHomeButtonEnabled(true);
 
     }
@@ -200,6 +202,8 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
 		MoreDeviceSettings.class.getName(),
         PowerMenuFragment.class.getName(),
         PowerMenuStyle.class.getName(),
+		SbSettings.class.getName(),
+		QuickSettingsTiles.class.getName(),
         NavbarTab.class.getName(),
         NavBarButtonStyle.class.getName(),
         NavbarStyleDimenSettings.class.getName(),
@@ -264,7 +268,6 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
             Integer index = mHeaderIndexMap.get(mTopLevelHeaderId);
             if (index != null) {
                 getListView().setItemChecked(index, true);
-                getListView().smoothScrollToPosition(index);
             }
         }
     }
