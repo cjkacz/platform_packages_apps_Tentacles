@@ -51,7 +51,7 @@ public class RecentsPanel extends SettingsPreferenceFragment implements
 
         mRecentClearAll = (CheckBoxPreference) prefSet.findPreference(RECENT_MENU_CLEAR_ALL);
         mRecentClearAll.setChecked(Settings.System.getInt(resolver,
-            Settings.System.SHOW_CLEAR_RECENTS_BUTTON, 1) == 1);
+            Settings.System.SHOW_CLEAR_RECENTS_BUTTON, 0) == 1);
         mRecentClearAll.setOnPreferenceChangeListener(this);
         mRecentClearAllPosition = (ListPreference) prefSet.findPreference(RECENT_MENU_CLEAR_ALL_LOCATION);
         String recentClearAllPosition = Settings.System.getString(resolver, Settings.System.CLEAR_RECENTS_BUTTON_LOCATION);
