@@ -53,6 +53,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String EXP_RING_MODE = "pref_ring_mode";
     private static final String EXP_NETWORK_MODE = "pref_network_mode";
     private static final String EXP_SCREENTIMEOUT_MODE = "pref_screentimeout_mode";
+    private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String GENERAL_SETTINGS = "pref_general_settings";
     private static final String STATIC_TILES = "static_tiles";
     private static final String DYNAMIC_TILES = "pref_dynamic_tiles";
@@ -63,6 +64,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private PreferenceCategory mGeneralSettings;
     private PreferenceCategory mStaticTiles;
     private PreferenceCategory mDynamicTiles;
+    private ListPreference mQuickPulldown;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,7 +81,20 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mGeneralSettings = (PreferenceCategory) prefSet.findPreference(GENERAL_SETTINGS);
         mStaticTiles = (PreferenceCategory) prefSet.findPreference(STATIC_TILES);
         mDynamicTiles = (PreferenceCategory) prefSet.findPreference(DYNAMIC_TILES);
-
+        mQuickPulldown = (ListPreference) prefSet.findPreference(QUICK_PULLDOWN);
+        
+        if (!Utils.isPhone(getActivity())) {
+            if (mQuickPulldown != null) {
+                mGeneralSettings.removePreference(mQuickPulldown);
+            }
+        } else {
+            // Quick Pulldown
+            mQuickPulldown.setOnPreferenceChangeListener(this);
+            int quickPulldownValue = Settings.System.getInt(resolver,
+                    Settings.System.QS_QUICK_PULLDOWN, 0);
+            mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
+            updatePulldownSummary(quickPulldownValue);
+		}
 
         // Add the sound mode
         mRingMode = (MultiSelectListPreference) prefSet.findPreference(EXP_RING_MODE);
@@ -167,7 +182,13 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getContentResolver();
-        if (preference == mRingMode) {
+        if (preference == mQuickPulldown) {
+            int quickPulldownValue = Integer.valueOf((String) newValue);
+            Settings.System.putInt(resolver, Settings.System.QS_QUICK_PULLDOWN,
+                    quickPulldownValue);
+            updatePulldownSummary(quickPulldownValue);
+            return true;
+        } else if (preference == mRingMode) {
             ArrayList<String> arrValue = new ArrayList<String>((Set<String>) newValue);
             Collections.sort(arrValue, new MultiSelectListPreferenceComparator(mRingMode));
             String value = TextUtils.join(SEPARATOR, arrValue);
@@ -207,6 +228,20 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             pref.setSummary(summary);
         } else {
             pref.setSummary(defSummary);
+        }
+    }
+    
+    private void updatePulldownSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // quick pulldown deactivated
+            mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_off));
+        } else {
+            String direction = res.getString(value == 2
+                    ? R.string.quick_pulldown_summary_left
+                    : R.string.quick_pulldown_summary_right);
+            mQuickPulldown.setSummary(res.getString(R.string.summary_quick_pulldown, direction));
         }
     }
 

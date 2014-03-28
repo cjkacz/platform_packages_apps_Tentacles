@@ -23,10 +23,12 @@
         android:title="@string/title_general" >
 
 
-	<PreferenceScreen
-		android:key="quick_pulldown"
-		android:title="@string/title_quick_pulldown"
-		android:fragment="com.oct.tentacles.fragments.sb.QuickPulldownSettings" />
+        <ListPreference
+            android:key="quick_pulldown"
+            android:title="@string/title_quick_pulldown"
+            android:entries="@array/quick_pulldown_entries"
+            android:entryValues="@array/quick_pulldown_values"
+            android:persistent="false" />
 
         <com.oct.tentacles.preference.SystemSettingCheckBoxPreference
             android:key="qs_collapse_panel"
