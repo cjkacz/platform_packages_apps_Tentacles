@@ -27,6 +27,11 @@
             android:targetPackage="com.oct.device"
             android:targetClass="com.oct.device.DeviceSettings" />
     </Preference-->
+    
+    <PreferenceScreen
+        android:fragment="com.oct.tentacles.fragments.NotificationLightSettings"
+        android:key="led_settings"
+        android:title="@string/led_settings_category_title" />
 
     <PreferenceCategory
         android:key="display_calibration_category"

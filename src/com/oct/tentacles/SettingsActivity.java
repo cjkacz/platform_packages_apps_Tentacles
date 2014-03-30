@@ -201,6 +201,7 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
         CarrierLabel.class.getName(),
     	KeyguardSettings.class.getName(),
 		MoreDeviceSettings.class.getName(),
+		NotificationLightSettings.class.getName(),
         PowerMenuFragment.class.getName(),
         PowerMenuStyle.class.getName(),
 		SbSettings.class.getName(),
