@@ -50,13 +50,12 @@ public class SbGeneralSettings extends SettingsPreferenceFragment implements OnP
 
     private static final String PREF_CUSTOM_STATUS_BAR_COLOR = "custom_status_bar_color";
     private static final String PREF_STATUS_BAR_OPAQUE_COLOR = "status_bar_opaque_color";
-    private static final String STATUS_BAR_BRIGHTNESS = "statusbar_brightness_slider";
 
     private CheckBoxPreference mCustomBarColor;
-    private CheckBoxPreference mStatusbarSliderPreference;
     private ColorPickerPreference mBarOpaqueColor;
 
     private boolean mCheckPreferences;
+	private Preference mApplyCustomBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -89,10 +88,8 @@ public class SbGeneralSettings extends SettingsPreferenceFragment implements OnP
         mCustomBarColor = (CheckBoxPreference) prefSet.findPreference(PREF_CUSTOM_STATUS_BAR_COLOR);
         mCustomBarColor.setChecked(Settings.System.getInt(mContentAppRes,
                 Settings.System.CUSTOM_STATUS_BAR_COLOR, 0) == 1);
-                
-        mStatusbarSliderPreference = (CheckBoxPreference) findPreference(STATUS_BAR_BRIGHTNESS);
-        mStatusbarSliderPreference.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.STATUSBAR_BRIGHTNESS_SLIDER, 0) == 1));
+				
+		mApplyCustomBar = (Preference) findPreference("custom_status_bar_apply");
 
         mBarOpaqueColor = (ColorPickerPreference) findPreference(PREF_STATUS_BAR_OPAQUE_COLOR);
         mBarOpaqueColor.setOnPreferenceChangeListener(this);
@@ -108,27 +105,9 @@ public class SbGeneralSettings extends SettingsPreferenceFragment implements OnP
         }
         mBarOpaqueColor.setNewPreviewColor(intColor);
 
-
         mCheckPreferences = true;
         return prefSet;
     }
-
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (!mCheckPreferences) {
-            return false;
-        }
-        if (preference == mBarOpaqueColor) {
-            String hex = ColorPickerPreference.convertToARGB(Integer
-                    .valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUS_BAR_OPAQUE_COLOR, intHex);
-            return true;
-        }
-        return false;
-    }
-
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
@@ -137,14 +116,28 @@ public class SbGeneralSettings extends SettingsPreferenceFragment implements OnP
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.CUSTOM_STATUS_BAR_COLOR,
             mCustomBarColor.isChecked() ? 1 : 0);
+            Helpers.restartSystemUI();
             return true;
-        } else if (preference == mStatusbarSliderPreference) {
-            value = mStatusbarSliderPreference.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.STATUSBAR_BRIGHTNESS_SLIDER, value ? 1 : 0);
-            return true;
+        } else if (preference == mApplyCustomBar) {
+           Helpers.restartSystemUI();
+           return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
+	
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mBarOpaqueColor) {
+            String hex = ColorPickerPreference.convertToARGB(Integer
+                    .valueOf(String.valueOf(objValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_OPAQUE_COLOR, intHex);
+        } else {
+            return false;
+        }
 
+        return true;
+    }
 }
