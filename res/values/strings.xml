@@ -486,6 +486,10 @@
     <string name="notif_alpha_title">Notification transparency</string>
     <string name="shortcut_image_not_valid">The chosen app did not return a valid icon or does not support image cropping. Use another app</string>
 
+    <!-- Notification Drawer - Swipe to Switch full screen detection-->
+    <string name="title_full_screen_swipe">Quick Swipe</string>
+    <string name="summary_full_screen_swipe">Swipe empty space on notification shade, or bottom bar, to show Quick Tiles</string>
+	
     <!-- String for IconPicker -->
     <string name="icon_picker_title">Choose icon source</string>
     <string name="icon_picker_system_icons_title">System icons</string>

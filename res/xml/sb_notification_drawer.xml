@@ -19,6 +19,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/notification_drawer_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+	
+    <CheckBoxPreference
+        android:key="full_swipe_to_switch_detection"
+        android:title="@string/title_full_screen_swipe"
+        android:summary="@string/summary_full_screen_swipe"
+        android:defaultValue="false" />
 
     <ListPreference
         android:key="notification_drawer_collapse_on_dismiss"
