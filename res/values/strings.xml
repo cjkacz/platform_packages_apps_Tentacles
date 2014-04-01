@@ -549,6 +549,21 @@
     <string name="icon_picker_search">Search</string>
     <string name="icon_picker_twitter">Twitter</string>
 
+    <!-- Lockscreen style settings -->
+    <string name="lockscreen_style_reset_message">Reset all lockscreen colors?</string>
+    <string name="lockscreen_icon_title">Lock handle icon</string>
+    <string name="lockscreen_lock_icon_custom">Custom icon</string>
+    <string name="lockscreen_lock_icon_default">Default icon</string>
+    <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
+    <string name="lockscreen_colorize_handle_summary">Lock color will be set to your custom image</string>
+    <string name="lockscreen_style_title">Lock handle</string>
+    <string name="lockscreen_frame_color_title">Frame color</string>
+    <string name="lockscreen_frame_color_summary">Color of the widget and unlock frames</string>
+    <string name="lockscreen_lock_color_title">Lock color</string>
+    <string name="lockscreen_lock_color_summary">Color of the lock handles</string>
+    <string name="lockscreen_dots_color_title">Dots color</string>
+    <string name="lockscreen_dots_color_summary">Color of the glowpad dots</string>
+	
     <!-- Navigation bar -->
     <string name="navigation_bar_general_category">General</string>
     <string name="navigation_bar_style_category">Style</string>
