@@ -17,7 +17,12 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Smooth custom ProgressBar -->
+    <!-- KernelTweaker -->
+    <PreferenceScreen
+        android:key="kerneltweaker_start"
+        android:title="@string/kerneltweaker_settings_title" />
+ 
+	<!-- Smooth custom ProgressBar -->
     <PreferenceScreen
         android:key="progressbar"
         android:fragment="com.oct.tentacles.fragments.ui.ProgressBar"

@@ -17,6 +17,8 @@
 package com.oct.tentacles.fragments.ui;
 
 import android.os.Bundle;
+import android.content.ContentResolver;
+import android.content.Intent;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -28,11 +30,48 @@ import com.oct.tentacles.preference.SettingsPreferenceFragment;
 
 public class GeneralSettings extends SettingsPreferenceFragment {
     private static final String TAG = "GeneralSettings";
+	
+	private static final String KERNELTWEAKER_START = "kerneltweaker_start";
+	
+    // Package name of the kernel tweaker app
+    public static final String KERNELTWEAKER_PACKAGE_NAME = "com.dsht.kerneltweaker";
+    // Intent for launching the kernel tweaker main actvity
+    public static Intent INTENT_KERNELTWEAKER = new Intent(Intent.ACTION_MAIN)
+            .setClassName(KERNELTWEAKER_PACKAGE_NAME, KERNELTWEAKER_PACKAGE_NAME + ".MainActivity");
+
+    private Preference mKernelTweaker;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.ui_general_settings);
+		
+        PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mKernelTweaker = (Preference)
+                prefSet.findPreference(KERNELTWEAKER_START);
+    }
+	
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+	
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+	
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mKernelTweaker){
+            startActivity(INTENT_KERNELTWEAKER);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }
