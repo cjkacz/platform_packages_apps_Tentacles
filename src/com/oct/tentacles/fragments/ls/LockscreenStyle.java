@@ -369,7 +369,7 @@ public class LockscreenStyle extends SettingsPreferenceFragment
 
     private int requestImageSize() {
         return (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 68, getResources().getDisplayMetrics());
+                TypedValue.COMPLEX_UNIT_DIP, 144, getResources().getDisplayMetrics());
     }
  
     private void showDialogInner(int id) {
