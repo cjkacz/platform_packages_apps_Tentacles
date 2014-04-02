@@ -50,5 +50,10 @@
             android:key="keyguard_style"
             android:fragment="com.oct.tentacles.fragments.ls.LockscreenStyle"
             android:title="@string/lockscreen_style_title"/>
+			
+        <PreferenceScreen
+            android:key="keyguard_enable_widgets"
+            android:fragment="com.oct.tentacles.fragments.ls.LockscreenWidgets"
+            android:title="@string/lockscreen_widgets_title"/>
 
 </PreferenceScreen>
