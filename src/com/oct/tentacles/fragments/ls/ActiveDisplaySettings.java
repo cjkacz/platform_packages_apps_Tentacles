@@ -44,7 +44,6 @@ public class ActiveDisplaySettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
     private static final String TAG = "ActiveDisplaySettings";
 
-    private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
     private static final String KEY_ENABLED = "ad_enable";
     private static final String KEY_SHOW_TEXT = "ad_text";
     private static final String KEY_ALL_NOTIFICATIONS = "ad_all_notifications";
@@ -65,7 +64,6 @@ public class ActiveDisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mSunlightModePref;
     private ListPreference mRedisplayPref;
     private AppMultiSelectListPreference mExcludedAppsPref;
-    private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mShowDatePref;
     private CheckBoxPreference mShowAmPmPref;
     private SeekBarPreference mBrightnessLevel;
@@ -134,12 +132,6 @@ public class ActiveDisplaySettings extends SettingsPreferenceFragment implements
         mBrightnessLevel.setValue(Settings.System.getInt(getContentResolver(),
                 Settings.System.ACTIVE_DISPLAY_BRIGHTNESS, 100));
         mBrightnessLevel.setOnPreferenceChangeListener(this);
-        
-        mLockRingBattery = (CheckBoxPreference) findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
-        if (mLockRingBattery != null) {
-            mLockRingBattery.setChecked(Settings.System.getInt(getContentResolver(),
-                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, 0) == 1);
-        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -202,11 +194,6 @@ public class ActiveDisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.ACTIVE_DISPLAY_SHOW_AMPM,
                     value ? 1 : 0);
-        } else if (preference == mLockRingBattery) {
-		    value = mLockRingBattery.isChecked();
-			Settings.System.putInt(getContentResolver(),
-                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
-					value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

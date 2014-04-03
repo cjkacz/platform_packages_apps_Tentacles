@@ -18,11 +18,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/ad_settings_title" >
 
-    <CheckBoxPreference
-        android:key="battery_around_lockscreen_ring"
-        android:title="@string/battery_around_lockscreen_ring"
-        android:defaultValue="true" />
-
     <SwitchPreference
         android:key="ad_enable"
         android:persistent="false"
