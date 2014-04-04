@@ -444,6 +444,18 @@
     <!-- Lockscreen wallpaper -->
     <string name="lockscreen_wallpaper">Custom wallpaper</string>
     <string name="select_wallpaper">Select wallpaper</string>
+ 
+    <!-- Lockscreen background -->
+    <string name="lockscreen_theme_title">Lockscreen theme</string>
+    <string name="lockscreen_background">Background</string>
+    <string name="lockscreen_background_style_title">Lockscreen background style</string>
+    <string name="background_color_fill_title">Background color</string>
+    <string name="background_default">Default style background</string>
+    <string name="background_color_fill">Color fill</string>
+    <string name="background_wallpaper">Custom wallpaper</string>
+    <string name="transparency">Background transparency</string>
+    <string name="background_result_successful">Background changed</string>
+    <string name="background_result_not_successful">Background not changed</string>
 
     <!-- Lockscreen Notifications -->
     <!-- Categories -->
@@ -573,7 +585,7 @@
     <string name="lockscreen_lock_icon_default">Default icon</string>
     <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
     <string name="lockscreen_colorize_handle_summary">Lock color will be set to the lock handle</string>
-    <string name="lockscreen_style_title">Lock handle</string>
+    <string name="lockscreen_style_title">Style</string>
     <string name="lockscreen_frame_color_title">Frame color</string>
     <string name="lockscreen_frame_color_summary">Color of the widget and unlock frames</string>
     <string name="lockscreen_lock_color_title">Lock color</string>
