@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.oct.tentacles.fragments;
+package com.oct.tentacles.fragments.more;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -43,7 +43,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.oct.tentacles.R;
-import com.oct.tentacles.fragments.ColorPickerView.OnColorChangedListener;
+import com.oct.tentacles.fragments.more.ColorPickerView.OnColorChangedListener;
 
 import java.util.ArrayList;
 import java.util.IllegalFormatException;

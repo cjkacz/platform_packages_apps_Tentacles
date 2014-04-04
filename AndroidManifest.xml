@@ -45,6 +45,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".fragments.more.MoreDeviceSettings"
+            android:label="@string/keyguard_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.oct.tentacles.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".fragments.navbar.NavbarTab"
             android:label="@string/navbar_cat" >
             <intent-filter>

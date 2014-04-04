@@ -41,6 +41,7 @@ import android.widget.TextView;
 import com.oct.tentacles.dslv.*;
 import com.oct.tentacles.fragments.*;
 import com.oct.tentacles.fragments.ls.*;
+import com.oct.tentacles.fragments.more.*;
 import com.oct.tentacles.fragments.navbar.*;
 import com.oct.tentacles.fragments.sb.*;
 import com.oct.tentacles.fragments.ui.*;

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.oct.tentacles.fragments;
+package com.oct.tentacles.fragments.more;
 
 import android.content.Context;
 import android.graphics.Canvas;
