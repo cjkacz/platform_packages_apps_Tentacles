@@ -59,6 +59,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String DYNAMIC_TILES = "pref_dynamic_tiles";
     private static final String PREF_TILES_PER_ROW = "tiles_per_row";
     private static final String PREF_TILES_PER_ROW_DUPLICATE_LANDSCAPE = "tiles_per_row_duplicate_landscape";
+    private static final String HIDE_LABELS = "qs_hide_text";
 
     private MultiSelectListPreference mRingMode;
     private ListPreference mNetworkMode;

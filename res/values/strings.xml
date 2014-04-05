@@ -311,6 +311,10 @@
     <string name="tiles_per_row_title">Tiles per row</string>
     <string name="tiles_per_row_duplicate_landscape_title">Scale landscape quantity</string>
     <string name="tiles_per_row_duplicate_landscape_summary">Landscape view doubles tiles per row quantity</string>
+    
+    <!-- Smaller QS -->
+    <string name="title_qs_hide_text">Hide text in tile</string>
+    <string name="summary_qs_hide_text">Will allow for more icons per row</string>
 
     <!-- Reset tiles -->
     <string name="tiles_reset_title">Reset</string>
@@ -823,5 +827,8 @@
     <string name="progressbar_reset_message">Reset progress bar style to default?</string>
     <string name="progressbar_button_reset">Reset defaults</string>
     <string name="progressbar_reset">Reset</string>
+    
+    <!-- Advanced, Device specific (DeviceParts) settings  -->
+    <string name="advanced_settings_title">Advanced</string>
 
 </resources>
