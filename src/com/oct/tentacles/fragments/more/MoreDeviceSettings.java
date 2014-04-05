@@ -36,6 +36,7 @@ import com.oct.tentacles.preference.SettingsPreferenceFragment;
 import com.oct.tentacles.Utils;
 
 import com.oct.tentacles.fragments.more.*;
+import com.oct.tentacles.fragments.*;
 
 import java.lang.Exception;
 import java.util.ArrayList;
@@ -91,6 +92,7 @@ public class MoreDeviceSettings extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new NotificationLightSettings();
+            frags[1] = new AdvancedSettings();
         }
 
         @Override
@@ -112,7 +114,8 @@ public class MoreDeviceSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-                    getString(R.string.led_settings_category_title)};
+                    getString(R.string.led_settings_category_title),
+                    getString(R.string.more_device_controls_title)};
         return titleString;
     }
 }
