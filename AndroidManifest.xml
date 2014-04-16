@@ -83,6 +83,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.oct.tentacles.fragments.ThemerSettings"
+            android:label="@string/themes_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.oct.tentacles.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
  	    android:name=".ShareToClipboard"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
  	    android:label="@string/title_clipboard_share" >

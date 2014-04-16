@@ -13,14 +13,10 @@
         android:title="@string/app_name" />
         
 	    <header
-	        android:id="@+id/themes_settings"
+	        android:key="@+id/themer_settings"
 	        android:icon="@drawable/ic_settings_themes"
-	        android:title="@string/themes_title">
- 	       <intent
-	            android:action="android.intent.action.MAIN"
-	            android:targetPackage="com.tmobile.themechooser"
-	            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
-	    </header>
+	        android:title="@string/themes_title"
+	        android:fragment="com.oct.tentacles.fragments.ThemerSettings" />
         <header
             android:key="@+id/interface_settings"
             android:icon="@drawable/ic_tentacles_interface"
