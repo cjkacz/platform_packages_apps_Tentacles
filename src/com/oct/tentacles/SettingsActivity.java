@@ -45,6 +45,7 @@ import com.oct.tentacles.fragments.more.*;
 import com.oct.tentacles.fragments.navbar.*;
 import com.oct.tentacles.fragments.sb.*;
 import com.oct.tentacles.fragments.ui.*;
+import com.oct.tentacles.slim.*;
 
 public class SettingsActivity extends PreferenceActivity implements ButtonBarHandler {
 
@@ -198,28 +199,29 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
     }
 
     private static final String[] ENTRY_FRAGMENTS = {
-    	AdvancedSettings.class.getName(),
-	AppSidebar.class.getName(),
-        InterfaceSettings.class.getName(),
-        CarrierLabel.class.getName(),
-    	KeyguardSettings.class.getName(),
-    	LockscreenStyle.class.getName(),
-	LockscreenWidgets.class.getName(),
-	MoreDeviceSettings.class.getName(),
-	NotificationLightSettings.class.getName(),
-        PowerMenuFragment.class.getName(),
-        PowerMenuStyle.class.getName(),
-	SbSettings.class.getName(),
-	ThemeSettings.class.getName(),
-	ThemerSettings.class.getName(),
-	ProgressBar.class.getName(),
-	QuickSettingsTiles.class.getName(),
-        NavbarTab.class.getName(),
+		AdvancedSettings.class.getName(),
+		AppSidebar.class.getName(),
+		InterfaceSettings.class.getName(),
+		CarrierLabel.class.getName(),
+		KeyguardSettings.class.getName(),
+		LockscreenStyle.class.getName(),
+		LockscreenWidgets.class.getName(),
+		MoreDeviceSettings.class.getName(),
+		NotificationLightSettings.class.getName(),
+		PowerMenuFragment.class.getName(),
+		PowerMenuStyle.class.getName(),
+		SbSettings.class.getName(),
+		ThemeSettings.class.getName(),
+		ThemerSettings.class.getName(),
+		ProgressBar.class.getName(),
+		QuickSettingsTiles.class.getName(),
+		QuietHours.class.getName(),
+		NavbarTab.class.getName(),
         NavBarButtonStyle.class.getName(),
-        NavbarStyleDimenSettings.class.getName(),
-        NavbarButtonFragment.class.getName(),
-        ButtonsListViewSettings.class.getName(),
-        NavbarSettings.class.getName()
+		NavbarStyleDimenSettings.class.getName(),
+		NavbarButtonFragment.class.getName(),
+		ButtonsListViewSettings.class.getName(),
+		NavbarSettings.class.getName()
     };
 
     @Override
