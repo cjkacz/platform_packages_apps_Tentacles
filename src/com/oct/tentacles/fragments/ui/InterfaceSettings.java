@@ -92,7 +92,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
             super(fm);
             frags[0] = new AppSwitcher();
             frags[1] = new GeneralSettings();
-			frags[2] = new RecentsPanel();
+            frags[2] = new RecentsPanel();
         }
 
         @Override
