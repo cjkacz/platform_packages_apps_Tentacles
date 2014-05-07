@@ -911,6 +911,7 @@
     <string name="advanced_settings_title">Advanced</string>
 	
     <!-- Lockscreen background -->
+	<string name="lockscreen_theme_title">Themes</string>
     <string name="lockscreen_background">Background</string>
     <string name="lockscreen_background_style_title">Lock screen background</string>
     <string name="background_default">Default background</string>
