@@ -76,8 +76,6 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     private static final String KEY_LOCKSCREEN_FRAME_COLOR = "lockscreen_frame_color";
     private static final String KEY_LOCKSCREEN_LOCK_COLOR = "lockscreen_lock_color";
     private static final String KEY_LOCKSCREEN_DOTS_COLOR = "lockscreen_dots_color";
-    private static final String KEY_LOCKSCREEN_TARGETS_COLOR = "lockscreen_targets_color";
-    private static final String KEY_LOCKSCREEN_MISC_COLOR = "lockscreen_misc_color";
 
     private String mDefault;
 
@@ -86,8 +84,6 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     private ColorPickerPreference mFrameColor;
     private ColorPickerPreference mLockColor;
     private ColorPickerPreference mDotsColor;
-    private ColorPickerPreference mTargetsColor;
-    private ColorPickerPreference mMiscColor;
     private ListPreference mLockIcon;
 
     private boolean mCheckPreferences;
@@ -262,20 +258,6 @@ public class LockscreenStyle extends SettingsPreferenceFragment
                     Settings.Secure.LOCKSCREEN_DOTS_COLOR, val);
             setPreferenceSummary(preference,
                     getResources().getString(R.string.lockscreen_dots_color_summary), val);
-            return true;
-        } else if (preference == mTargetsColor) {
-            int val = Integer.valueOf(String.valueOf(newValue));
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.LOCKSCREEN_TARGETS_COLOR, val);
-            setPreferenceSummary(preference,
-                    getResources().getString(R.string.lockscreen_targets_color_summary), val);
-            return true;
-        } else if (preference == mMiscColor) {
-            int val = Integer.valueOf(String.valueOf(newValue));
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.LOCKSCREEN_MISC_COLOR, val);
-            setPreferenceSummary(preference,
-                    getResources().getString(R.string.lockscreen_misc_color_summary), val);
             return true;
         }
         return false;
