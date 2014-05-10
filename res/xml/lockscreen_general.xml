@@ -34,7 +34,7 @@
 	 
     <PreferenceScreen
             android:key="keyguard_style"
-            android:fragment="com.oct.tentacles.fragments.ls.LockscreenStyle"
+            android:fragment="com.oct.tentacles.fragments.ls.LockscreenInterface"
             android:title="@string/lockscreen_style_title"/>
 			
     <PreferenceScreen
