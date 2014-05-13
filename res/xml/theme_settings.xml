@@ -65,17 +65,19 @@
         android:id="@+id/wallpaper_settings"
         android:title="@string/wallpaper_settings_title"
         android:icon="@drawable/prd_ic_wallpapers">
-        <intent android:targetPackage="com.android.launcher3"
-                android:targetClass="com.android.launcher3.WallpaperPickerActivity" />
+        <intent android:targetPackage="com.android.wallpapercropper"
+                android:targetClass="com.android.wallpapercropper.WallpaperPickerActivity" />
     </Preference>
 
     <!-- Lockscreen Wallpaper -->
-    <PreferenceScreen
+    <Preference
         android:id="@+id/lockscreen_wallpaper_settings"
-        android:fragment="com.oct.tentacles.fragments.ls.LockscreenStyle"
         android:title="@string/lockscreen_wallpaper_settings_title"
-        android:icon="@drawable/prd_ic_lockscreen_wallpapers" />
-
+        android:icon="@drawable/prd_ic_lockscreen_wallpapers">
+        <intent android:targetPackage="com.android.wallpapercropper"
+                android:targetClass="com.android.wallpapercropper.LockWallpaperPickerActivity" />
+    </Preference>
+    
     <!-- Boot Animations -->
     <Preference
         android:id="@+id/bootanim_settings"
