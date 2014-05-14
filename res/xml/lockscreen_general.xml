@@ -42,4 +42,9 @@
         android:title="@string/battery_around_lockscreen_ring"
         android:defaultValue="true" />
 
+    <PreferenceScreen
+        android:key="keyguard_style"
+        android:fragment="com.oct.tentacles.fragments.ls.LockscreenStyle"
+        android:title="@string/lockscreen_style_title"/>
+
 </PreferenceScreen>
