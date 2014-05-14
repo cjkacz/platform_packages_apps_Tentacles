@@ -56,8 +56,6 @@ public class LockscreenGeneral extends SettingsPreferenceFragment implements
     private static final int DLG_ENABLE_EIGHT_TARGETS = 0;
 
     private static final String KEY_BATTERY_STATUS = "lockscreen_battery_status";
-    private static final String KEY_SEE_TRHOUGH = "see_through";
-    private static final String KEY_BLUR_RADIUS = "blur_radius";
     private static final String PREF_LOCKSCREEN_EIGHT_TARGETS = "lockscreen_eight_targets";
     private static final String PREF_LOCKSCREEN_SHORTCUTS = "lockscreen_shortcuts";
 
