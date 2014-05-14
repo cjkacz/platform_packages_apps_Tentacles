@@ -10,7 +10,7 @@
     <!-- Themes Settings -->
     <!-- Theme manager -->
     <string name="themes_title">Themes</string>
-	<string name="themer_settings_title">Themer</string>
+    <string name="themer_settings_title">Themer</string>
 	
     <!-- Settings main menu entry -->
     <string name="themes_settings_title">Themes</string>
@@ -31,13 +31,13 @@
     <string name="system">System</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
-	<string name="add">Add</string>
+    <string name="add">Add</string>
     <string name="save">Save</string>
     <string name="reset">Reset</string>
-	<string name="reset_message">Reset all entries to default?</string>
-	<string name="attention">Attention</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="attention">Attention</string>
     <string name="empty">Empty</string>
-	<string name="delete">Delete</string>
+    <string name="delete">Delete</string>
     
     <!-- Generic strings -->
     <string name="ok_string">Ok</string>
@@ -70,8 +70,8 @@
     <string name="choose_application">Choose application</string>
     <string name="select_application">Select application</string>
     <string name="dpi">DPI</string>
-	<string name="menu_cancel">Cancel</string>
-	<string name="menu_save">Save</string>
+    <string name="menu_cancel">Cancel</string>
+    <string name="menu_save">Save</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -90,14 +90,14 @@
     <string name="supersu_title">SuperSU</string>
 
     <!-- Slim power menu -->
-	<string name="power_menu_title">Power menu</string>
+    <string name="power_menu_title">Power menu</string>
     <string name="power_menu_style_summary">Change global menu colors</string>
     
     <!-- Lockscreen settings -->
     <string name="keyguard_title">Lockscreen</string>
     <string name="ls_activedisplay_category">Active Display</string>
     <string name="ls_general_category">General</string>
-	<string name="ls_notifications_category">Notifications</string>
+    <string name="ls_notifications_category">Notifications</string>
     <string name="ls_targets_category">Targets</string>
     
     <!-- Active Display Notifications -->
@@ -139,7 +139,7 @@
     <string name="ad_pocket_mode_always">Always</string>
 	
     <!-- App sidebar -->
-	<string name="app_sidebar_category">App Sidebar</string>
+    <string name="app_sidebar_category">App Sidebar</string>
     <string name="app_sidebar_title">Appbar</string>
     <string name="app_sidebar_enable_title">Enable Appbar</string>
     <string name="app_sidebar_enable_summaryOn">\@appbar is enabled</string>
@@ -194,7 +194,7 @@
     <string name="gamma_tuning_contrast">Contrast</string>
     <string name="gamma_tuning_brightness">Brightness</string>
     <string name="gamma_tuning_saturation">Saturation</string>
-	<string name="color_default">Default</string>
+    <string name="color_default">Default</string>
 	
     <!-- Notification LED -->
     <!-- Display settings screen, notification light settings -->
@@ -310,10 +310,10 @@
     <!-- Header on first screen of choose encryption password [CHAR LIMIT=30] -->
     <string name="encryptionpassword_choose_your_password_header">Set encryption password</string>
 	
-	<!-- Status bar -->
-	<string name="sb_battery_category">Battery</string>
-	<string name="sb_clock_category">Clock</string>
-	<string name="sb_general_category">General</string>
+    <!-- Status bar -->
+    <string name="sb_battery_category">Battery</string>
+    <string name="sb_clock_category">Clock</string>
+    <string name="sb_general_category">General</string>
     <string name="sb_notification_category">Notification Drawer</string>
     <string name="sb_quicksettings_category">Quick Settings</string>
 
@@ -329,7 +329,7 @@
     <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
  
     <!-- Quick settings panel  -->
-	<string name="status_bar_title">Statusbar</string>
+    <string name="status_bar_title">Statusbar</string>
     <string name="quick_settings_panel_title">Quick Settings panel</string>
     <string name="title_static_tiles">Static tiles</string>
     <string name="tile_picker_title">Tiles and layout</string>
@@ -343,7 +343,7 @@
     <string name="title_tile_camera">Camera</string>
     <string name="title_tile_sleep">Go to sleep</string>
     <string name="title_tile_gps">GPS</string>
-	<string name="title_tile_tentacles">Tentacles</string>
+    <string name="title_tile_tentacles">Tentacles</string>
     <string name="title_tile_torch">Torch</string>
     <string name="title_tile_lockscreen">Lock screen</string>
     <string name="title_tile_lte">LTE</string>
@@ -500,7 +500,7 @@
     <string name="clock_font_light">Light</string>
     <string name="clock_font_normal">Normal</string>	
     
-	<!-- Interface settings -->
+    <!-- Interface settings -->
     <string name="ui_recents_category">Recents Panel</string>   
     
     <!-- Recents clear all -->
@@ -515,7 +515,7 @@
     <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
 	
     <!-- Lockscreen widget settings -->
-	<string name="enabled">Enabled</string>
+    <string name="enabled">Enabled</string>
     <string name="lockscreen_widgets_title">Widgets</string>
     <string name="lockscreen_camera_widget_title">Enable camera widget</string>
     <string name="lockscreen_camera_widget_summary">Show secure camera widget on the lock screen</string>
@@ -531,6 +531,7 @@
     <string name="select_wallpaper">Select wallpaper</string>
  
     <!-- Lockscreen background -->
+    <string name="lockscreen_theme_title">Lockscreen theme</string>
     <string name="lockscreen_background">Background</string>
     <string name="lockscreen_background_style_title">Lock screen background</string>
     <string name="background_default">Default background</string>
@@ -569,21 +570,21 @@
     <string name="privacy_mode">Privacy Mode</string>
     <string name="privacy_mode_summary">Disables notifications from beeing shown and dismissed. This way, you just see the icons of your notifications.</string>
     
-   <!-- Omniswitch default -->
-   <string name="app_switcher_category">App Switcher</string>
-   <string name="omniswitch_settings_title">OmniSwitch</string>   
-   <string name="omniswitch_category">OmniSwitch</string>
-   <string name="recents_use_omniswitch_title">Use for recents</string>
-   <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of default recents view</string>
-   <string name="omniswitch_start_settings_title">Settings</string>
-   <string name="omniswitch_start_settings_summary">Open OmniSwitch settings</string>
-   <string name="omniswitch_not_installed_title">Warning</string>
-   <string name="omniswitch_not_installed_summary">OmniSwitch is not installed</string>
-   <string name="omniswitch_not_installed_message">OmniSwitch is not installed</string>
-   <string name="omniswitch_first_time_title">Information</string>
-   <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
+    <!-- Omniswitch default -->
+    <string name="app_switcher_category">App Switcher</string>
+    <string name="omniswitch_settings_title">OmniSwitch</string>   
+    <string name="omniswitch_category">OmniSwitch</string>
+    <string name="recents_use_omniswitch_title">Use for recents</string>
+    <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of default recents view</string>
+    <string name="omniswitch_start_settings_title">Settings</string>
+    <string name="omniswitch_start_settings_summary">Open OmniSwitch settings</string>
+    <string name="omniswitch_not_installed_title">Warning</string>
+    <string name="omniswitch_not_installed_summary">OmniSwitch is not installed</string>
+    <string name="omniswitch_not_installed_message">OmniSwitch is not installed</string>
+    <string name="omniswitch_first_time_title">Information</string>
+    <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
    
-	<!-- Notification drawer background -->
+    <!-- Notification drawer background -->
     <string name="notification_style_title">Style</string>
     <string name="notification_style_summary">Change your notification drawer style</string>
     <string name="notification_wallpaper_title">Background</string>
@@ -675,7 +676,7 @@
     <string name="lockscreen_dots_color_title">Dots color</string>
     <string name="lockscreen_dots_color_summary">Color of the glowpad dots</string>
 
-	<string name="battery_around_lockscreen_ring">Battery level around lock ring</string>
+    <string name="battery_around_lockscreen_ring">Battery level around lock ring</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_general_category">General</string>
@@ -742,7 +743,7 @@
     <string name="shortcut_action_lastapp">Last app</string>
     <string name="shortcut_action_search">Search</string>
     <string name="shortcut_action_screenshot">Screenshot</string>
-	<string name="shortcut_action_screen_record">Screen Record</string>
+    <string name="shortcut_action_screen_record">Screen Record</string>
     <string name="shortcut_action_menu">Menu</string>
     <string name="shortcut_action_ime">Open IME Switcher</string>
     <string name="shortcut_action_kill">Kill app</string>
