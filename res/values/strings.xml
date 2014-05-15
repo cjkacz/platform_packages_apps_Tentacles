@@ -59,7 +59,6 @@
     <string name="menu_main_activity_change_locale">Locale</string>
 
     <!-- General Strings -->
-    <string name="advanced_settings">Advanced settings</string>
     <string name="misc_short">Misc</string>
     <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
     <string name="text_on">On</string>
@@ -168,34 +167,7 @@
     <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
-    
-    <!--  Other device settings -->
-    <string name="more_device_controls_title">Device tunables</string>
-    <string name="more_device_settings_title">Other device options</string>
-    <string name="sensors_motors_title">Sensors &amp; motors</string>
-    <string name="display_calibration_title">Display calibration</string>
-
-    <!-- Hardware tunables - Vibrator intensity -->
-    <string name="vibrator_intensity_title">Vibrator intensity</string>
-    <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
-
-    <!-- Hardware tunables - Color calibration -->
-    <string name="color_calibration_title">Color calibration</string>
-    <string name="color_calibration_summary">Calibrate on-screen colors</string>
-    <string name="color_red_title">Red</string>
-    <string name="color_green_title">Green</string>
-    <string name="color_blue_title">Blue</string>
-
-    <!-- Hardware tunables - Gamma calibration -->
-    <string name="category_gamma_title">Gamma</string>
-    <string name="gamma_tuning_title_head">Gamma calibration</string>
-    <string name="gamma_tuning_summary_head">Tweak gamma values</string>
-    <string name="gamma_tuning_control_set_header">Group <xliff:g id="index">%d</xliff:g></string> <!-- used if no name provided by overlay -->
-    <string name="gamma_tuning_contrast">Contrast</string>
-    <string name="gamma_tuning_brightness">Brightness</string>
-    <string name="gamma_tuning_saturation">Saturation</string>
-    <string name="color_default">Default</string>
-	
+    	
     <!-- Notification LED -->
     <!-- Display settings screen, notification light settings -->
     <string name="led_settings_category_title">Notification LED</string>
@@ -318,6 +290,7 @@
     <string name="sb_quicksettings_category">Quick Settings</string>
 
     <!-- Status bar color -->
+    <string name="color_default">Default</string>
     <string name="custom_status_bar_color_title">Custom status bar color</string>
     <string name="custom_status_bar_color_summary">This will filter your current system bar to your preferred color</string>
     <string name="status_bar_opaque_color">Opaque color</string>
@@ -906,8 +879,5 @@
     <string name="progressbar_reset_message">Reset progress bar style to default?</string>
     <string name="progressbar_button_reset">Reset defaults</string>
     <string name="progressbar_reset">Reset</string>
-    
-    <!-- Advanced, Device specific (DeviceParts) settings  -->
-    <string name="advanced_settings_title">Advanced</string>
 
 </resources>

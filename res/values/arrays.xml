@@ -79,11 +79,6 @@
         <item>2.0</item>
     </string-array>
     
-    <!-- Gamma calibration descriptors, deliberately empty as string values populated via
-    per-device overlay. Required to build on non-hardware tunable devices -->
-    <string-array name="gamma_descriptors">
-    </string-array>
-    
     <!-- Notification LED -->
     <!-- Values for the notification light pulse spinners -->
     <string-array name="notification_pulse_length_entries">

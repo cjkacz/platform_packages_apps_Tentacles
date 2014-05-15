@@ -28,11 +28,6 @@
             android:title="@string/keyguard_title"
             android:fragment="com.oct.tentacles.fragments.ls.KeyguardSettings" />  
         <header
-            android:id="@+id/more_device_settings"
-            android:title="@string/more_device_controls_title"
-            android:icon="@drawable/ic_tentacles_device"
-            android:fragment="com.oct.tentacles.fragments.more.MoreDeviceSettings" />
-        <header
             android:id="@+id/navbar_settings"
             android:icon="@drawable/ic_settings_navigation"
             android:title="@string/navbar_cat"
@@ -64,5 +59,4 @@
                 <extra android:name="actionEntries" android:value="shortcut_action_power_menu_entries" />
                 <extra android:name="fragment" android:value="com.oct.tentacles.fragments.PowerMenuFragment" />
         </header> 
-
 </preference-headers>
