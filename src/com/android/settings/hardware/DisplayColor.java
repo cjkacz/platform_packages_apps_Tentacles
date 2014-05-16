@@ -33,7 +33,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Button;
 
-import com.android.settings.R;
+import com.oct.tentacles.R;
 
 import org.cyanogenmod.hardware.DisplayColorCalibration;
 

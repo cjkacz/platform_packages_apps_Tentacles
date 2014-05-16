@@ -36,7 +36,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.android.settings.R;
+import com.oct.tentacles.R;
 import org.cyanogenmod.hardware.DisplayGammaCalibration;
 
 /**

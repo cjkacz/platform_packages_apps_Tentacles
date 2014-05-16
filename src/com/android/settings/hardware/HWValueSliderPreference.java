@@ -37,7 +37,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Button;
 
-import com.android.settings.R;
+import com.oct.tentacles.R;
 
 public abstract class HWValueSliderPreference extends DialogPreference implements
         SeekBar.OnSeekBarChangeListener {

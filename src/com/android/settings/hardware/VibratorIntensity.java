@@ -21,7 +21,7 @@ import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.widget.SeekBar;
 
-import com.android.settings.R;
+import com.oct.tentacles.R;
 import org.cyanogenmod.hardware.VibratorHW;
 
 public class VibratorIntensity extends HWValueSliderPreference {

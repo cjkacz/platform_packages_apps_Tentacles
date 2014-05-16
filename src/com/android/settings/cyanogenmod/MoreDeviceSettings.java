@@ -24,7 +24,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
-import com.android.settings.R;
+import com.oct.tentacles.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.hardware.DisplayColor;
 import com.android.settings.hardware.DisplayGamma;
