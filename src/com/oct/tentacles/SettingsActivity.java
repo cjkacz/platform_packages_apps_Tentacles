@@ -38,7 +38,7 @@ import android.widget.TextView;
 
 
 // fragments import for entry
-import com.android.settings.cyanogenmod.*;
+import com.android.settings.cyanogenmod.MoreDeviceSettings;
 import com.oct.tentacles.dslv.*;
 import com.oct.tentacles.fragments.*;
 import com.oct.tentacles.fragments.ls.*;
