@@ -64,5 +64,10 @@
                 <extra android:name="actionValues" android:value="shortcut_action_power_menu_values" />
                 <extra android:name="actionEntries" android:value="shortcut_action_power_menu_entries" />
                 <extra android:name="fragment" android:value="com.oct.tentacles.fragments.PowerMenuFragment" />
-        </header> 
+        </header>
+        <header
+            android:fragment="com.android.settings.privacyguard.PrivacyGuardManager"
+            android:key="privacy_guard_manager"
+            android:summary="@string/privacy_guard_manager_summary"
+            android:title="@string/privacy_guard_manager_title" /> 
 </preference-headers>
