@@ -22,14 +22,11 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
@@ -41,15 +38,11 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.MediaStore;
 import android.provider.Settings;
-import android.view.Display;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 import com.android.internal.util.slim.DeviceUtils;
@@ -62,21 +55,23 @@ import com.android.internal.widget.LockPatternUtils;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class LockscreenStyle extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String TAG = "LockscreenStyle";
 
-    private static final String KEY_LOCKSCREEN_COLORIZE_ICON = "lockscreen_colorize_icon";
-    private static final String KEY_LOCKSCREEN_LOCK_ICON = "lockscreen_lock_icon";
-    private static final String KEY_LOCKSCREEN_FRAME_COLOR = "lockscreen_frame_color";
-    private static final String KEY_LOCKSCREEN_LOCK_COLOR = "lockscreen_lock_color";
-    private static final String KEY_LOCKSCREEN_DOTS_COLOR = "lockscreen_dots_color";
-
+    private static final String KEY_LOCKSCREEN_COLORIZE_ICON =
+            "lockscreen_colorize_icon";
+    private static final String KEY_LOCKSCREEN_LOCK_ICON =
+            "lockscreen_lock_icon";
+    private static final String KEY_LOCKSCREEN_FRAME_COLOR =
+            "lockscreen_frame_color";
+    private static final String KEY_LOCKSCREEN_LOCK_COLOR =
+            "lockscreen_lock_color";
+    private static final String KEY_LOCKSCREEN_DOTS_COLOR =
+            "lockscreen_dots_color";
 
     private String mDefault;
 
@@ -85,8 +80,6 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     private ColorPickerPreference mFrameColor;
     private ColorPickerPreference mLockColor;
     private ColorPickerPreference mDotsColor;
-    
-    private ColorPickerPreference mLockColorFill;
 
     private ListPreference mLockIcon;
 
@@ -180,11 +173,6 @@ public class LockscreenStyle extends SettingsPreferenceFragment
         mCheckPreferences = true;
         return prefSet;
     }
-    
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
@@ -208,14 +196,14 @@ public class LockscreenStyle extends SettingsPreferenceFragment
                         Settings.Secure.LOCKSCREEN_LOCK_ICON, path);
 
                 mColorizeCustom.setEnabled(path != null);
+            }
         } else {
             if (mLockImage.exists()) {
                 mLockImage.delete();
             }
         }
         updateLockSummary();
-		}
-	}
+    }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -311,12 +299,12 @@ public class LockscreenStyle extends SettingsPreferenceFragment
 
         intent.setType("image/*");
         intent.putExtra("crop", "true");
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
+        intent.putExtra("aspectX", px);
+        intent.putExtra("aspectY", px);
         intent.putExtra("outputX", px);
         intent.putExtra("outputY", px);
         intent.putExtra("scale", true);
-        intent.putExtra("scaleUpIfNeeded", true);
+        intent.putExtra("scaleUpIfNeeded", false);
         intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
 
         try {
