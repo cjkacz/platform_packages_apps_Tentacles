@@ -35,6 +35,12 @@
             android:title="@string/title_collapse_panel"
             android:summary="@string/summary_collapse_panel" />
 
+        <PreferenceScreen
+            android:key="quicksettings_tiles_style"
+            android:fragment="com.oct.tentacles.fragments.sb.QuickSettingsTilesStyle"
+            android:title="@string/quicksettings_tiles_style"
+            android:summary="@string/summary_quicksettings_tiles_style" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -117,22 +123,6 @@
             android:key="qs_dyanmic_wifi"
             android:title="@string/title_dynamic_wifi"
             android:defaultValue="true" />
-
-    </PreferenceCategory>
-    
-    <PreferenceCategory
-        android:title="@string/quicksettings_tiles_style_additional_options">
-
-        <ListPreference
-            android:key="tiles_per_row"
-            android:entries="@array/tiles_per_row_entries"
-            android:entryValues="@array/tiles_per_row_values"
-            android:title="@string/tiles_per_row_title" />
-
-        <CheckBoxPreference
-            android:key="tiles_per_row_duplicate_landscape"
-            android:title="@string/tiles_per_row_duplicate_landscape_title"
-            android:summary="@string/tiles_per_row_duplicate_landscape_summary" />
 
     </PreferenceCategory>
 

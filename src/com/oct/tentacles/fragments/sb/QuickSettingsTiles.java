@@ -27,7 +27,6 @@ import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -62,7 +61,6 @@ public class QuickSettingsTiles extends Fragment {
     private Resources mSystemUiResources;
     private TileAdapter mTileAdapter;
     private boolean mConfigRibbon;
-    private int mTileTextSize;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -105,9 +103,6 @@ public class QuickSettingsTiles extends Fragment {
             mDragView.setColumnCount(columnCount);
         }
         mTileAdapter = new TileAdapter(getActivity(), mConfigRibbon);
-        int colCount = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.QUICK_TILES_PER_ROW, 3);
-        updateTileTextSize(colCount);
         return mDragView;
     }
 
@@ -152,9 +147,8 @@ public class QuickSettingsTiles extends Fragment {
         View tileView = null;
         if (iconRegId != 0) {
             tileView = (View) mInflater.inflate(R.layout.quick_settings_tile_generic, null, false);
-            TextView name = (TextView) tileView.findViewById(R.id.tile_textview);
+            final TextView name = (TextView) tileView.findViewById(R.id.tile_textview);
             name.setText(titleId);
-            name.setTextSize(1, mTileTextSize);
             name.setCompoundDrawablesRelativeWithIntrinsicBounds(0, iconRegId, 0, 0);
         } else {
             final boolean isUserTile = titleId == QuickSettingsUtil.TILES.get(QSConstants.TILE_USER).getTitleResId();
@@ -272,22 +266,6 @@ public class QuickSettingsTiles extends Fragment {
         alert.create().show();
     }
 
-    private void updateTileTextSize(int column) {
-        // adjust the tile text size based on column count
-        switch (column) {
-            case 5:
-                mTileTextSize = 7;
-                break;
-            case 4:
-                mTileTextSize = 10;
-                break;
-            case 3:
-            default:
-                mTileTextSize = 12;
-                break;
-        }
-    }
- 
     private static class TileAdapter extends ArrayAdapter<String> {
         private static class Entry {
             public final TileInfo tile;
