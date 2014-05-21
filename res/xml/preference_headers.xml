@@ -39,6 +39,11 @@
             android:title="@string/navbar_cat"
             android:fragment="com.oct.tentacles.fragments.navbar.NavbarTab" />
         <header
+            android:id="@+id/pie_control"
+            android:title="@string/pie_carbon_title"
+            android:icon="@drawable/ic_tentacles_pie"
+            android:fragment="com.oct.tentacles.fragments.pie.PieTab" />
+        <header
             android:id="@+id/statusbar_settings"
             android:title="@string/status_bar_title"
             android:icon="@drawable/ic_tentacles_sb"

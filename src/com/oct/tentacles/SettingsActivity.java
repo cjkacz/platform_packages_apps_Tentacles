@@ -44,6 +44,7 @@ import com.oct.tentacles.dslv.*;
 import com.oct.tentacles.fragments.*;
 import com.oct.tentacles.fragments.ls.*;
 import com.oct.tentacles.fragments.navbar.*;
+import com.oct.tentacles.fragments.pie.*;
 import com.oct.tentacles.fragments.sb.*;
 import com.oct.tentacles.fragments.ui.*;
 import com.oct.tentacles.slim.*;
@@ -208,6 +209,12 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
 		LockscreenStyle.class.getName(),
 		LockscreenWidgets.class.getName(),
 		PrivacyGuardManager.class.getName(),
+		PieButtonFragment.class.getName(),
+		PieButtonStyleSettings.class.getName(),
+		PieControl.class.getName(),
+		PieStyleSettings.class.getName(),
+		PieTriggerSettings.class.getName(),
+		PieTab.class.getName(),
 		PowerMenuFragment.class.getName(),
 		PowerMenuStyle.class.getName(),
 		SbSettings.class.getName(),
