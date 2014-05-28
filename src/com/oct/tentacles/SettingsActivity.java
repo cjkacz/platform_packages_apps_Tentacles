@@ -40,6 +40,7 @@ import android.widget.TextView;
 // fragments import for entry
 import com.android.settings.cyanogenmod.MoreDeviceSettings;
 import com.android.settings.privacyguard.*;
+import com.android.settings.applications.*;
 import com.oct.tentacles.dslv.*;
 import com.oct.tentacles.fragments.*;
 import com.oct.tentacles.fragments.ls.*;
@@ -209,6 +210,7 @@ public class SettingsActivity extends PreferenceActivity implements ButtonBarHan
 		LockscreenStyle.class.getName(),
 		LockscreenWidgets.class.getName(),
 		PrivacyGuardManager.class.getName(),
+		AppOpsDetails.class.getName(),
 		PieButtonFragment.class.getName(),
 		PieButtonStyleSettings.class.getName(),
 		PieControl.class.getName(),
