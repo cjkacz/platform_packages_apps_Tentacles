@@ -91,7 +91,11 @@
     <!-- Slim power menu -->
     <string name="power_menu_title">Power menu</string>
     <string name="power_menu_style_summary">Change global menu colors</string>
-    
+    <string name="power_menu_expanded_desktop">Expanded desktop</string>
+    <string name="expanded_desktop_disabled">Disabled</string>
+    <string name="expanded_desktop_status_bar">Status bar visible</string>
+    <string name="expanded_desktop_no_status_bar">Status bar hidden</string>
+
     <!-- Lockscreen settings -->
     <string name="keyguard_title">Lockscreen</string>
     <string name="ls_activedisplay_category">Active Display</string>
